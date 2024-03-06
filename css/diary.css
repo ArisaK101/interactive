@@ -1,0 +1,326 @@
+.memu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.memu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.memu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memu-wrap .hamburger>div {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/*TOP AND BOTTOM LINES */
+.memu-wrap .hamburger>div:before,
+.memu-wrap .hamburger>div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* MOVES LINE DOWN */
+.memu-wrap .hamburger>div:after {
+  top: 10px;
+}
+
+/* TOGGLER ANIMATE */
+.memu-wrap .toggler:checked+.hamburger>div {
+  transform: rotate(135deg);
+}
+
+/* TURN LINES INTO X */
+.memu-wrap .toggler:checked+.hamburger>div:before,
+.memu-wrap .toggler:checked+.hamburger>div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* ROTATE ON HOVER WHEN CHECKED */
+.memu-wrap .toggler:checked:hover+.hamburger>div {
+  transform: rotate(225deg);
+}
+
+/* SHOW MEMU */
+.memu-wrap .toggler:checked~.memu {
+  visibility: visible;
+}
+
+.memu-wrap .toggler:checked~.memu>div {
+  transform: scale(1);
+  transition-duration: var(--memu-speed);
+}
+
+.memu-wrap .toggler:checked~.memu>div>div {
+  opacity: 1;
+  transition: opacity .4s ease;
+}
+
+.memu-wrap .memu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  text-align: end;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e6856;
+  transition: all .4s ease;
+  opacity: 70%;
+  list-style: none;
+  font-size: 50px;
+}
+
+.memu-wrap .memu>div>div>li {
+  lift-style: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-right: 51px;
+}
+
+.memu-wrap .memu>div>div>li>a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .4s ease;
+}
+
+a:-webkit-any-link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+body {
+  font-family: monospace;
+  text-align: center;
+  margin-top: 10vh;
+  background: #F5FFDB;
+  color: #141414;
+}
+
+.text {
+  font-size: 1.5em;
+  padding: 7vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+
+.month {
+  padding: 39px 25px;
+  width: 100%;
+  background: #0e6856;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #d9ddcd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 64px 0;
+  background: #faffec;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+  padding: 11px;
+}
+
+.days li:hover {
+
+  color: white !important;
+}
+.popup0 {
+  position: absolute;
+  height: 32px;
+  width: 13.3%;
+  z-index: 10000;
+  margin-left: 527px;
+  margin-top: -30px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+
+.popup {
+  position: absolute;
+  background: #234A40;
+  height: 32px;
+  width: 13.3%;
+  z-index: 10000;
+  display: none;
+  margin-left: -13px;
+  margin-top: -24px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.days li:hover .popup {
+  display: block;
+}
+
+.shop {
+  margin-top: 15vh;
+  font-size: 4em;
+}
+
+.container {
+  position: relative;
+  width: 1058px;
+  height: 387px;
+  left: 704px;
+  top: 39px;
+}
+
+.outof {
+  width: 263px;
+  height: 49px;
+  left: 380px;
+  top: 70px;
+  z-index: 1;
+  background: #2F6657;
+  border-radius: 87px;
+  font-size: 30px;
+  padding: 5px;
+  color: #fbffed;
+}
+
+.text-box {
+  position: relative;
+  width: 951px;
+  height: 387px;
+  background: #FBFFEE;
+  border-radius: 62px;
+  z-index: 2;
+  font-size: 3em;
+  padding: 5px;
+}
+
+
+.gift {
+  width: 214px;
+  display: grid;
+  left: 30px;
+  padding: 15px;
+}
+
+.popup2 {
+  position: absolute;
+  background: #2f6657;
+  height: 148px;
+  width: 27vw;
+  z-index: 10000;
+  display: none;
+  left: -651px;
+  padding: 30px;
+  font-size: 14px;
+  border-radius: 15px;
+  color: #fbffed;
+  text-align: center;
+  top: 50px;
+  color: #fff;
+}
+div:hover .popup2 {
+  display: block;
+}
+button {
+  background-color: #F5FFDB;
+  border: none;
+  color: #000;
+  padding: 18px 32px;
+  padding-top: 20vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:monospace;
+  font-size: 60px;
+}
+
+#myDIV{
+  margin: auto;
+  padding: 11vh;
+  pad
