@@ -1,0 +1,188 @@
+@import url('https://fonts.cdnfonts.com/css/pixgamer');
+body{
+position: relative;
+width: 1920px;
+height: 8216px;
+background: #000000;
+text-align: center;
+font-family: 'PixGamer', sans-serif;
+overflow-x: hidden;
+}
+.discription{
+display: none;
+position: fixed;
+z-index: 7;
+top: 582px;
+left: 153px;
+width: 471px;
+background: rgba(0,0,0,0.4);
+}
+.whiteText{
+  color:#fff;
+  font-size: 2em;
+}
+.redText{
+  color:#FFA5A5;
+  font-size: 1.8em;
+}
+.greenText{
+  color:#A7F070;
+  font-size: 2em;
+}
+.type1{
+  box-sizing: border-box;
+  position: absolute;
+  font-size: 6em;
+  padding: 5vw;
+  margin: 222px 118px 0px 118px;
+  color: #fff;
+  border: 9px solid #418A0A;
+  background: rgba(0,0,0,0.4);
+  z-index: 10000;
+}
+#landscape {
+  display: none;
+  /* margin: 0 auto;
+    width: 100vw;*/
+}
+#landscape1 {
+  display: none;
+  margin: 0 auto;
+}
+.showAll #car-side,
+.showAll #car-side2,
+.showAll #gas,
+.showAll #GasText,
+.showAll #TraficText,
+.showAll #night,
+.showAll #landscape,
+.showAll #car-side3,
+.showAll #crash,
+.showAll #type-final,
+.showAll #landscape1 {
+  display: block;
+}
+#car-img {
+position: absolute;
+display: none;
+left: 45vw;
+text-align: center;
+}
+#car-side{
+  position: absolute;
+  left: 1401px;
+  top: 644px;
+  display: none;
+  width: 603px;
+}
+#car-side2{
+  position: absolute;
+  left: 1401px;
+  top: 257px;
+  display: none;
+  width: 603px;
+  pointer-events: all;
+}
+#car-side3{
+  width: 1073px;
+  position: absolute;
+  top: 267px;
+  display: none;
+  width: 603px;
+}
+#trafic{
+  position: absolute;
+  left: 1445px;
+  top: 644px;
+  display: none;
+  width: 600px;
+}
+.type{
+display: none;
+color:#FFA5A5;
+width: 800px;
+margin: 300px auto;
+font-size: 3em;
+}
+#SpaceText {
+    padding: 8vh;
+    margin: 465px auto;
+    font-size: 4em;
+}
+.showAll .type,
+.showAll .discription,
+.showAll .type-final,
+.showAll .type-t {
+  display: block;
+}
+.type-t{
+display: none;
+color:#A7F070;
+width: 800px;
+margin: 48px auto;
+font-size: 4em;
+}
+
+#TraficText{
+  display: none;
+  color:#fff;
+  margin: 50px 118px 0px 118px;
+  font-size: 4em;
+}
+#gas{
+  left: 876px;
+  top: 1750px;
+  display: none;
+  margin: 0 auto;
+}
+
+#night{
+  display: none;
+  margin: 0 auto;
+  width: 912px;
+}
+#crash{
+  left: 1000px;
+  top: 1750px;
+  display: none;
+  width:912px;
+  margin: 0 auto;
+}
+#MoneyText{
+  color:#fff;
+  font-size:3em;
+}
+#GasText{
+  color:#fff;
+  font-size:4em;
+}
+.type-final{
+  color:#fff;
+  font-size:4em;
+  display: none;
+    margin: 67px 139px 67px 139px;
+}
+.frame {
+  position: relative;
+  pointer-events: none;
+}
+.final{
+  height: 900px;
+}
+@media all and (max-width: 1171.8px) {
+                                            body{
+                                              width: 1171.8px;
+                                              height: 7829px;
+                                            }
+                                            #landscape{
+                                              width: 1171.8px;
+                                            }
+                                            .type1 {
+                                                font-size: 4em;
+                                                width: 66vw;
+                                                margin-left: 173px;
+                                            }
+                                            .final {
+                                            margin-top: 241px;
+                                            }
+                                  }
